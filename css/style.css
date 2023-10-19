@@ -1,58 +1,6 @@
-html{
+/* html{
   scroll-behavior: smooth;
-}
-
-body{
-  background-color: #737373;
-  font-size: 18px;
-  line-height: 1.15;
-  margin: 0;
-  padding: 0;
-}
-
-
-.overview{
-  background-attachment: fixed; /* Parallax effect */     
-  background-position: center;  /* Parallax effect */
-  background-repeat: no-repeat; /* Parallax effect */
-  background-size: cover;       /* Parallax effect */
-  color: white;
-  height: 400px;                /* Parallax effect */
-}
-
-
-.overview p{
-  color: white;
-  font-size: 24px;
-  padding: 0 100px;
-  text-align: center;
-}
-
-h1{
-  font-size: 50px;
-  line-height: 1;
-  padding: 50px 0;
-  text-align: center;
-}
-
-h2{
-  font-size: 32px;
-  line-height: 1.5;
-}
-
-nav li{
-  display:inline;
-  padding-right:20px;
-
-}
-
-nav a{
-  color: black;
-  font-weight: bold;
-  text-decoration: none; 
-}
-
-
+} */
 .skip a{
   background: white;
   left: 0;
@@ -60,175 +8,265 @@ nav a{
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
+  position: absolute;
+  top: -40px;
 }
 
-
-nav{
-  background-color: #ddd;
-  padding: 25px 0; 
-  text-align: left;
+.skip a:focus {
+  position: absolute;
+  top: 20px; 
 }
-
-footer{
-  background-color: black;
-  color: white;
-  padding-top: 30px;
-  text-align: center;
-  /* test */
-}
-
-
-.text-block{
-  background-color: rgba(255, 255, 255, .8);
-  border: 10px solid black;
-  padding: 30px;
-}
-
-
-@media screen and (prefers-reduced-motion: reduce){
-  html{
-      scroll-behavior: auto; /* Removes scroll animation */
-  }
-
-  .skip a{
-    -webkit-transition: none; /* sets to default setting */
-    transition: none;        /* sets to default setting */
-   }
-
-  /*Turn off parallax*/
-  header{
-    background-attachment: initial;
-  }
-}
-
 a:hover,
 a:focus {
   text-decoration: underline;
 }
 
-/* Step 2a: Write selector/rule property to position the default position for the skip class element*/
-.skip a {
-  position: absolute;
-  top: -40px;
-  left: 0;
+nav{
+  background-color: #ddd;
+  padding: 25px 0px; 
+  text-align: left;
 }
 
-/* Step 2b: Write selector/rule property to position the skip class element when it is in focus*/
-.skip a:focus {
-  position: absolute;
-  top: 20px; 
+nav li{
+  display:inline;
+  padding-right:20px;
+  padding-left:10px;
 }
 
-/* Step 3: Write selector/rule property to style all elements when in focus*/
-*:focus {
-  border: 2px solid black;
+nav a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none; 
 }
-
-
-/* Step 4: Write selector/rule property to style the container */
 .main {
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: 5fr 5fr 5fr;
   grid-gap: 15px;
+} 
+body{
+  background-color: #336699;
+  font-size: 18px;
+  line-height: 1.15;
+  margin: 0;
+  padding: 0;
 }
 
-
-/* Step 5: Write selector/rule property to add the background image to the 
-first div in the grid  and place it in the grid. */
-.main > div:first-child {
-  grid-column: 1 / -1;
-  background-image: url("images/fitz"); 
-  background-repeat: no-repeat; 
-}
-
-
-/* Steps 6 and 7: Write the selector/rule properties to place the next elements in the next
- four rows in the grid. */
-
-      /*This will be a lot of rules.... but be strategic and combine seletors*/
-      .about,
-      .method, 
-      .clients, 
-      .contact {
-        grid-column: 2 / 3; 
-        grid-row: 2; 
-      }
-      .about-image,
-      .about {
-        grid-row: 2; 
-      }
-      .method-image,
-      .method {
-        grid-row: 3; 
-      }
-      .clients, 
-      .clients-image {
-        grid-row: 4; 
-      }
-      .contact,
-      .contact-image {
-        grid-row: 5;
-      }
-      .about-image, 
-      .method-image,
-      .clients-image,
-      .contact-image {
-        grid-column: 1 / -1;
-        max-height: 600px;
-        overflow: hidden;
-      }
-      
-      /* Selector for the fourth element in the grid */
-
-      
-      /* Selector for the fifth element in the grid */
-
-      
-
- /* Step 8: Write the selector/rule property to style the .text-block class. */
-.text-block {
+.overview{
+  grid-column-start: 2;
+  font-size: 50px;
+  line-height: 1;
+  /* padding: 50px 0; */
   text-align: center;
   align-self: center;
-  justify-self: center;
+  justify-self: center; 
+}
+h2{
+  font-size: 32px;
+  line-height: 1.5;
+}
+h3{
+  font-size: 25px;
+  line-height: 1.5;
+}
+ul{
+  list-style-type: none;
+}
+.overview{
+  grid-column-start: 1 / -1;
+}
+.pluto-image{
+  grid-row: 2;
+}
+.brul-image{
+  grid-row: 3;
+}
+.hua-image{
+  grid-row: 4;
+}
+.fitz-image{
+  grid-row: 5;
+}
+.nuonuo-image{
+  grid-row: 6;
+}
+.rocket-image{
+  grid-row: 7;
+}
+.smoothie-image{
+  grid-row: 8;
+}
+.pluto-text {
+  grid-row-start: 2;
+}
+.brul-text {
+  grid-row-start: 3;
+}
+.hua-text {
+  grid-row-start: 4;
+}
+.fitz-text{
+  grid-row: 5;
+}
+.nuonuo-text{
+  grid-row: 6;
+}
+.rocket-text{
+  grid-row: 7;
+}
+.smoothie-text{
+  grid-row: 8;
+}
+.pluto-likes {
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+.pluto-gallery{
+  grid-row-start: 2;
+}
+.brul-gallery {
+  grid-row-start: 3;
+}
+.hua-gallery {
+  grid-row-start: 4;
+}
+.fitz-gallery{
+  grid-row: 5;
+}
+.nuonuo-gallery{
+  grid-row: 6;
+}
+.rocket-gallery{
+  grid-row: 7;
+}
+.smoothie-gallery{
+  grid-row: 8;
+}
+.pluto-image,
+.fitz-image,
+.nuonuo-image,
+.rocket-image,
+.smoothie-image,
+.hua-image,
+.brul-image {
+  grid-column-start: 1 / 1;
+  text-align: center;
+  align-self: center; 
+  justify-self: center; 
+  border: 10px solid black;
+}
+.pluto-text,
+.hua-text,
+.fitz-text,
+.nuonuo-text,
+.rocket-text,
+.smoothie-text,
+.brul-text {
+  background-color: rgba(255, 255, 255, .8);
+  border: 10px solid white;
+  grid-column: 2;
+  text-align: center;
+  align-self: center; 
+  justify-self: center; 
+}
+.pluto-gallery,
+.hua-gallery,
+.fitz-gallery,
+.nuonuo-gallery,
+.rocket-gallery,
+.smoothie-gallery,
+.brul-gallery{
+  grid-column: 3;
+  border: 10px solid white;
+  display:inline;
+}
+.pluto-gallery li,
+.hua-gallery li,
+.fitz-gallery li,
+.nuonuo-gallery li,
+.rocket-gallery li,
+.smoothie-gallery li,
+.brul-gallery li{
+  display:inline;
 }
 
-/* Add your media query here */
-@media screen and (min-width: 800px){
+.hssoup {
+  grid-row: 2;
+}
+.chickencurry {
+  grid-row: 3;
+}
+.jiaozi {
+  grid-row: 4;
+}
 
-  /* Step 9: Write the selector/rule property to style the nav element */
-  nav { 
+.jiaozi-overiew,
+.chickencurry-overiew,
+.hssoup-overiew{
+  display: grid;
+  grid-template-columns: 5fr 5fr;
+  grid-gap: 15px;
+}  
+.jiaozi-text,
+.chickencurry-text,
+.hssoup-text{
+  /* grid-row: 2 / 4; */
+  grid-column: 2;
+  border: 10px solid white;
+  background-color: rgba(255, 255, 255, .8);
+} 
+.jiaozi-image,
+.chickencurry-image,
+.hssoup-image{
+  align-self: center; 
+  justify-self: center; 
+  grid-row: 2 / 4;
+  grid-column: 1;
+} 
+.jiaozi-description,
+.chickencurry-description,
+.hssoup-description{
+  text-align: center;
+  grid-column: 2;
+  border: 10px solid white;
+  background-color: rgba(255, 255, 255, .8);
+
+} 
+.jiaozi-ingredients,
+.chickencurry-ingredients,
+.hssoup-ingredients{
+  text-align: center;
+  grid-column: 2;
+  border: 10px solid white;
+  background-color: rgba(255, 255, 255, .8);
+} 
+.jiaozi-steps,
+.chickencurry-steps,
+.hssoup-steps{
+  text-align: center;
+  grid-column: 2;
+  border: 10px solid white;
+  background-color: rgba(255, 255, 255, .8);
+}
+.jiaozi-additional,
+.chickencurry-additional,
+.hssoup-additional{
+  text-align: center;
+  grid-column: 1 / -1;
+  border: 10px solid white;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html{
+      scroll-behavior: auto; 
+  }
+}
+@media screen and (min-width: 800px){
+  nav {  
     /* Set your desired styles for the <nav> element */
     text-align: right; 
     padding-top: 30px; 
     padding-bottom: 30px; 
     padding-left: 0px;
     padding-right: 0px;
-  } 
-
-  /* Step 10: Write the selector/rule property to update the .container class */
-  .container {
-    grid-template-columns: 50px auto 500px auto 50px;
-    grid-gap: 15px;
-  }
-
-  /* Steps 11 and 12: Update the grid-column property of the grid's children (where-needed)*/
-  .about,
-  .clients,
-  .method-image,
-  .contact-image {
-    grid-column: 3 / span 2; 
-  }
-  /* Selector for yet another element within the grid */
-  .method,
-  .contact,
-  .about-image,
-  .clients-image {
-    grid-column: 2 / span 2;
-  }
-
-  /* Step 13:Write the selector/rule property to update the .text-block class */
-    .text-block {
-      max-height: 250px;
-      overflow: scroll; 
-    }
-} 
+  }  
+}
