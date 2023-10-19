@@ -269,7 +269,9 @@ ul{
     padding-left: 0px;
     padding-right: 0px;
   }  
-  .main{
-    max-height: 250px;
+  .jiaozi-image,
+  .chickencurry-image,
+  .hssoup-image{
+    max-height: 100px;
   }
 }
