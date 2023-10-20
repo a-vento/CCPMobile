@@ -154,6 +154,15 @@ ul li{
   min-width: fit-content;
   overflow: scroll;
 }
+#pluto-gallery > ul li,
+#fitz-gallery > ul li,
+#hua-gallery > ul li,
+#nuonuo-gallery > ul li,
+#smoothie-gallery > ul,
+#brul-gallery > ul li,
+#rocket-gallery > ul li {
+margin: 15px;
+}
 
 .jiaozi-overiew,
 .chickencurry-overiew,
