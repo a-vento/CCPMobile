@@ -189,6 +189,11 @@ ul li{
   grid-row: 3;
   grid-column: 2;
 }
+.jiaozi-additional,
+.chickencurry-additional,
+.hssoup-additional{
+  grid-column: 1/-1;
+}
 
 .jiaozi-text,
 .chickencurry-text,
@@ -206,7 +211,7 @@ ul li{
   align-self: center; 
   justify-self: center; 
   object-fit: cover;
-  overflow: scroll;
+  overflow: hidden;
   margin: 20px;
 } 
 .jiaozi-description,
@@ -227,7 +232,8 @@ ul li{
   background-color: rgba(255, 255, 255, .8);
   height: auto;
   min-height: fit-content;
-  overflow: hidden;
+  overflow: scroll;
+  max-height: 300px;
 } 
 .jiaozi-steps,
 .chickencurry-steps,
@@ -238,7 +244,7 @@ ul li{
   height: auto;
   overflow: scroll;
   min-height: fit-content;
-  overflow: hidden;
+  max-height: 300px;
 }
 
 .jiaozi-additional > ul,
@@ -253,9 +259,15 @@ ul li{
   margin-bottom: 50px;
   display: grid;
   grid-template-columns: 33% 33% 33%;
-  overflow: hidden;
   text-align: center;
   min-width: fit-content;
   overflow: hidden;
   margin:auto;
+}
+
+.jiaozi-additional > ul li,
+.chickencurry-additional > ul li,
+.hssoup-additional > ul li{
+margin: 7px;
+overflow: scroll;
 }
