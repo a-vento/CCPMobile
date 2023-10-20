@@ -14,7 +14,7 @@
 
 .skip a:focus {
   position: absolute;
-  top: 20px; 
+  top: 80px; 
 }
 a:hover,
 a:focus {
@@ -91,7 +91,7 @@ ul li{
   text-align: center;
   align-self: center; 
   justify-self: center; 
-  overflow: hidden;
+  overflow: scroll;
   min-height: fit-content;
 }
 .pluto-text,
@@ -103,12 +103,21 @@ ul li{
 .brul-text {
   background-color: rgba(255, 255, 255, .8);
   border: 10px solid white;
-  text-align: center;
   align-self: center; 
   justify-self: center; 
   overflow: scroll; 
+  margin-bottom: 15px;
 }
 
+#pluto-gallery,
+#fitz-gallery,
+#hua-gallery,
+#nuonuo-gallery,
+#smoothie-gallery,
+#brul-gallery,
+#rocket-gallery {
+  overflow: scroll;
+}
 #pluto-gallery > ul,
 #fitz-gallery > ul,
 #hua-gallery > ul,
@@ -118,14 +127,15 @@ ul li{
 #rocket-gallery > ul {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  min-height: fit-content;
+  max-width: 100%;
+  height: auto;
   text-align: center;
   align-self: center; 
   justify-self: center; 
   border: 10px solid white;
   margin-bottom: 50px;
-  overflow: hidden;
-
+  min-width: fit-content;
+  overflow: scroll;
 }
 .hssoup {
   grid-row: 2;
@@ -159,6 +169,8 @@ ul li{
   justify-self: center; 
   grid-row: 2 / 4;
   grid-column: 1;
+  height: auto;
+  overflow: scroll;
 } 
 .jiaozi-description,
 .chickencurry-description,
@@ -167,7 +179,9 @@ ul li{
   grid-column: 2;
   border: 10px solid white;
   background-color: rgba(255, 255, 255, .8);
-  overflow: scroll; 
+  height: auto;
+  overflow: scroll;
+  min-height: fit-content;
 
 } 
 .jiaozi-ingredients,
@@ -177,7 +191,9 @@ ul li{
   grid-column: 2;
   border: 10px solid white;
   background-color: rgba(255, 255, 255, .8);
-  overflow: scroll; 
+  height: auto;
+  overflow: scroll;
+  min-height: fit-content;
 } 
 .jiaozi-steps,
 .chickencurry-steps,
@@ -186,7 +202,9 @@ ul li{
   grid-column: 2;
   border: 10px solid white;
   background-color: rgba(255, 255, 255, .8);
-  overflow: scroll; 
+  height: auto;
+  overflow: scroll;
+  min-height: fit-content;
 }
 .jiaozi-additional,
 .chickencurry-additional,
@@ -194,7 +212,9 @@ ul li{
   text-align: center;
   grid-column: 1 / -1;
   border: 10px solid white;
-  overflow: scroll; 
+  height: auto;
+  overflow: scroll;
+  min-height: fit-content;
 }
 
 
