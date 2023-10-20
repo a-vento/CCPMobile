@@ -1,6 +1,16 @@
-/* html{
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; 
+  }
+
+  .skip a{
+    -webkit-transition: none; 
+    transition: none;        
+   }
+}
+html{
   scroll-behavior: smooth;
-} */
+}
 .skip a{
   background: white;
   left: 0;
@@ -137,22 +147,15 @@ ul li{
   min-width: fit-content;
   overflow: scroll;
 }
-.hssoup {
-  grid-row: 2;
-}
-.chickencurry {
-  grid-row: 3;
-}
-.jiaozi {
-  grid-row: 4;
-}
 
 .jiaozi-overiew,
 .chickencurry-overiew,
 .hssoup-overiew{
   display: grid;
-  grid-template-columns: 5fr 5fr;
-  grid-gap: 15px;
+  grid-template-columns: 40% 60%;
+  overflow: hidden;
+  grid-gap: 30px;
+  object-fit: contain;
 }  
 .jiaozi-text,
 .chickencurry-text,
@@ -160,16 +163,22 @@ ul li{
   grid-column: 2;
   border: 10px solid white;
   background-color: rgba(255, 255, 255, .8);
-  overflow: scroll; 
+  overflow: hidden;
 } 
+body > main > div.hssoup-overiew > div.hssoup-image > img{
+  overflow: hidden;
+}
 .jiaozi-image,
+.hssoup-image,
 .chickencurry-image,
 .hssoup-image{
   align-self: center; 
   justify-self: center; 
-  grid-row: 2 / 4;
+  grid-row: 2/4;
   grid-column: 1;
-  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
   overflow: scroll;
 } 
 .jiaozi-description,
@@ -182,7 +191,7 @@ ul li{
   height: auto;
   overflow: scroll;
   min-height: fit-content;
-
+  overflow: hidden;
 } 
 .jiaozi-ingredients,
 .chickencurry-ingredients,
@@ -192,8 +201,8 @@ ul li{
   border: 10px solid white;
   background-color: rgba(255, 255, 255, .8);
   height: auto;
-  overflow: scroll;
   min-height: fit-content;
+  overflow: hidden;
 } 
 .jiaozi-steps,
 .chickencurry-steps,
@@ -205,6 +214,7 @@ ul li{
   height: auto;
   overflow: scroll;
   min-height: fit-content;
+  overflow: hidden;
 }
 .jiaozi-additional,
 .chickencurry-additional,
@@ -215,60 +225,5 @@ ul li{
   height: auto;
   overflow: scroll;
   min-height: fit-content;
-}
-
-
-/* @media screen and (max-width: 400px){
-  nav {  
-    text-align: right; 
-    padding-top: 30px; 
-    padding-bottom: 30px; 
-    padding-left: 0px;
-    padding-right: 0px;
-  }  
-  .pluto-image,
-  .fitz-image,
-  .nuonuo-image,
-  .rocket-image,
-  .smoothie-image,
-  .hua-image,
-  .brul-image {
-    max-height: 120px;
-  }
-  #pluto-gallery > ul,
-  #fitz-gallery > ul,
-  #hua-gallery > ul,
-  #nuonuo-gallery > ul,
-  #smoothie-gallery > ul,
-  #brul-gallery > ul,
-  #rocket-gallery > ul {
-    grid-template-columns: 50% 50%;
-    max-height: fit-content;
-  }
-  .jiaozi-image,
-  .chickencurry-image,
-  .hssoup-image{
-    max-height: 100px;
-  }
-  .pluto-text,
-  .hua-text,
-  .fitz-text,
-  .nuonuo-text,
-  .rocket-text,
-  .smoothie-text,
-  .brul-text {
-    max-height: 250px;
-    overflow: scroll; 
-  }
-}  */
-
-@media screen and (prefers-reduced-motion: reduce){
-  html{
-      scroll-behavior: auto; /* Removes scroll animation */
-  }
-
-  .skip a{
-    -webkit-transition: none; /* sets to default setting */
-    transition: none;        /* sets to default setting */
-   }
+  overflow: hidden;
 }
