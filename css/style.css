@@ -79,6 +79,7 @@ ul li{
   text-align: center;
   align-self: center;
   justify-self: center; 
+  overflow: scroll; 
 }
 .pluto-image,
 .fitz-image,
@@ -91,6 +92,7 @@ ul li{
   align-self: center; 
   justify-self: center; 
   overflow: hidden;
+  min-height: fit-content;
 }
 .pluto-text,
 .hua-text,
@@ -104,6 +106,7 @@ ul li{
   text-align: center;
   align-self: center; 
   justify-self: center; 
+  overflow: scroll; 
 }
 
 #pluto-gallery > ul,
@@ -147,6 +150,7 @@ ul li{
   grid-column: 2;
   border: 10px solid white;
   background-color: rgba(255, 255, 255, .8);
+  overflow: scroll; 
 } 
 .jiaozi-image,
 .chickencurry-image,
@@ -163,6 +167,7 @@ ul li{
   grid-column: 2;
   border: 10px solid white;
   background-color: rgba(255, 255, 255, .8);
+  overflow: scroll; 
 
 } 
 .jiaozi-ingredients,
@@ -172,6 +177,7 @@ ul li{
   grid-column: 2;
   border: 10px solid white;
   background-color: rgba(255, 255, 255, .8);
+  overflow: scroll; 
 } 
 .jiaozi-steps,
 .chickencurry-steps,
@@ -180,6 +186,7 @@ ul li{
   grid-column: 2;
   border: 10px solid white;
   background-color: rgba(255, 255, 255, .8);
+  overflow: scroll; 
 }
 .jiaozi-additional,
 .chickencurry-additional,
@@ -187,10 +194,11 @@ ul li{
   text-align: center;
   grid-column: 1 / -1;
   border: 10px solid white;
+  overflow: scroll; 
 }
 
 
-@media screen and (max-width: 400px){
+/* @media screen and (max-width: 400px){
   nav {  
     text-align: right; 
     padding-top: 30px; 
@@ -222,7 +230,17 @@ ul li{
   .hssoup-image{
     max-height: 100px;
   }
-} 
+  .pluto-text,
+  .hua-text,
+  .fitz-text,
+  .nuonuo-text,
+  .rocket-text,
+  .smoothie-text,
+  .brul-text {
+    max-height: 250px;
+    overflow: scroll; 
+  }
+}  */
 
 @media screen and (prefers-reduced-motion: reduce){
   html{
@@ -233,9 +251,4 @@ ul li{
     -webkit-transition: none; /* sets to default setting */
     transition: none;        /* sets to default setting */
    }
-
-  /*Turn off parallax*/
-  header{
-    background-attachment: initial;
-  }
 }
