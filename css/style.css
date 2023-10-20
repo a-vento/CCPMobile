@@ -38,11 +38,27 @@ nav a{
   font-weight: bold;
   text-decoration: none; 
 }
-.main {
-  display: grid;
-  grid-template-columns: 5fr 5fr 5fr;
-  grid-gap: 15px;
-} 
+h2{
+  color: white;
+  font-weight: bold;
+  text-decoration: none; 
+  font-size: 40px;
+  text-align: center;
+}
+h2{
+  color: black;
+  font-weight: bold;
+  text-decoration: none; 
+  font-size: 40px;
+  text-align: center;
+}
+h3{
+  color: black;
+  font-weight: bold;
+  text-decoration: none; 
+  font-size: 20px;
+  text-align: center;
+}
 body{
   background-color: #336699;
   font-size: 18px;
@@ -50,96 +66,19 @@ body{
   margin: 0;
   padding: 0;
 }
-
-.overview{
-  grid-column-start: 2;
-  font-size: 50px;
-  line-height: 1;
-  /* padding: 50px 0; */
-  text-align: center;
-  align-self: center;
-  justify-self: center; 
-}
-h2{
-  font-size: 32px;
-  line-height: 1.5;
-}
-h3{
-  font-size: 25px;
-  line-height: 1.5;
-}
 ul{
+  color: black;
+}
+ul li{
   list-style-type: none;
 }
 .overview{
-  grid-column-start: 1 / -1;
-}
-.pluto-image{
-  grid-row: 2;
-}
-.brul-image{
-  grid-row: 3;
-}
-.hua-image{
-  grid-row: 4;
-}
-.fitz-image{
-  grid-row: 5;
-}
-.nuonuo-image{
-  grid-row: 6;
-}
-.rocket-image{
-  grid-row: 7;
-}
-.smoothie-image{
-  grid-row: 8;
-}
-.pluto-text {
-  grid-row-start: 2;
-}
-.brul-text {
-  grid-row-start: 3;
-}
-.hua-text {
-  grid-row-start: 4;
-}
-.fitz-text{
-  grid-row: 5;
-}
-.nuonuo-text{
-  grid-row: 6;
-}
-.rocket-text{
-  grid-row: 7;
-}
-.smoothie-text{
-  grid-row: 8;
-}
-.pluto-likes {
-  grid-row-start: 2;
-  grid-column-start: 2;
-}
-.pluto-gallery{
-  grid-row-start: 2;
-}
-.brul-gallery {
-  grid-row-start: 3;
-}
-.hua-gallery {
-  grid-row-start: 4;
-}
-.fitz-gallery{
-  grid-row: 5;
-}
-.nuonuo-gallery{
-  grid-row: 6;
-}
-.rocket-gallery{
-  grid-row: 7;
-}
-.smoothie-gallery{
-  grid-row: 8;
+  font-family: "Copperplate", "Courier New", monospace;
+  font-size: 50px;
+  line-height: 1;
+  text-align: center;
+  align-self: center;
+  justify-self: center; 
 }
 .pluto-image,
 .fitz-image,
@@ -148,11 +87,10 @@ ul{
 .smoothie-image,
 .hua-image,
 .brul-image {
-  grid-column-start: 1 / 1;
   text-align: center;
   align-self: center; 
   justify-self: center; 
-  border: 10px solid black;
+  overflow: hidden;
 }
 .pluto-text,
 .hua-text,
@@ -163,32 +101,29 @@ ul{
 .brul-text {
   background-color: rgba(255, 255, 255, .8);
   border: 10px solid white;
-  grid-column: 2;
   text-align: center;
   align-self: center; 
   justify-self: center; 
 }
-.pluto-gallery,
-.hua-gallery,
-.fitz-gallery,
-.nuonuo-gallery,
-.rocket-gallery,
-.smoothie-gallery,
-.brul-gallery{
-  grid-column: 3;
-  border: 10px solid white;
-  display:inline;
-}
-.pluto-gallery li,
-.hua-gallery li,
-.fitz-gallery li,
-.nuonuo-gallery li,
-.rocket-gallery li,
-.smoothie-gallery li,
-.brul-gallery li{
-  display:inline;
-}
 
+#pluto-gallery > ul,
+#fitz-gallery > ul,
+#hua-gallery > ul,
+#nuonuo-gallery > ul,
+#smoothie-gallery > ul,
+#brul-gallery > ul,
+#rocket-gallery > ul {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  min-height: fit-content;
+  text-align: center;
+  align-self: center; 
+  justify-self: center; 
+  border: 10px solid white;
+  margin-bottom: 50px;
+  overflow: hidden;
+
+}
 .hssoup {
   grid-row: 2;
 }
@@ -209,7 +144,6 @@ ul{
 .jiaozi-text,
 .chickencurry-text,
 .hssoup-text{
-  /* grid-row: 2 / 4; */
   grid-column: 2;
   border: 10px solid white;
   background-color: rgba(255, 255, 255, .8);
@@ -255,23 +189,53 @@ ul{
   border: 10px solid white;
 }
 
-@media screen and (prefers-reduced-motion: reduce) {
-  html{
-      scroll-behavior: auto; 
-  }
-}
-@media screen and (min-width: 800px){
+
+@media screen and (max-width: 400px){
   nav {  
-    /* Set your desired styles for the <nav> element */
     text-align: right; 
     padding-top: 30px; 
     padding-bottom: 30px; 
     padding-left: 0px;
     padding-right: 0px;
   }  
+  .pluto-image,
+  .fitz-image,
+  .nuonuo-image,
+  .rocket-image,
+  .smoothie-image,
+  .hua-image,
+  .brul-image {
+    max-height: 120px;
+  }
+  #pluto-gallery > ul,
+  #fitz-gallery > ul,
+  #hua-gallery > ul,
+  #nuonuo-gallery > ul,
+  #smoothie-gallery > ul,
+  #brul-gallery > ul,
+  #rocket-gallery > ul {
+    grid-template-columns: 50% 50%;
+    max-height: fit-content;
+  }
   .jiaozi-image,
   .chickencurry-image,
   .hssoup-image{
     max-height: 100px;
+  }
+} 
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    -webkit-transition: none; /* sets to default setting */
+    transition: none;        /* sets to default setting */
+   }
+
+  /*Turn off parallax*/
+  header{
+    background-attachment: initial;
   }
 }
