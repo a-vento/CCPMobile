@@ -175,7 +175,6 @@ margin: 15px;
   align-self: center; 
   justify-self: center; 
   border: 10px solid white;
-  margin-bottom: 50px;
   min-width: fit-content;
   overflow: hidden;
   margin:auto;
@@ -218,7 +217,7 @@ margin: 15px;
   background-color: rgba(255, 255, 255, .8);
   grid-row: 2;
   grid-column: 1;
-  max-height: 300px;
+  max-height: 400px;
   min-height: fit-content;
   overflow: scroll;
 } 
@@ -242,7 +241,7 @@ margin: 15px;
   height: auto;
   min-height: fit-content;
   overflow: scroll;
-  max-height: 300px;
+  max-height: 400px;
 } 
 .jiaozi-ingredients,
 .chickencurry-ingredients,
@@ -253,7 +252,7 @@ margin: 15px;
   height: auto;
   min-height: fit-content;
   overflow: scroll;
-  max-height: 300px;
+  max-height: 400px;
 } 
 .jiaozi-steps,
 .chickencurry-steps,
@@ -264,7 +263,7 @@ margin: 15px;
   height: auto;
   overflow: scroll;
   min-height: fit-content;
-  max-height: 300px;
+  max-height: 400px;
 }
 
 .jiaozi-additional > ul,
@@ -276,7 +275,6 @@ margin: 15px;
   align-self: center; 
   justify-self: center; 
   border-top: 10px solid white;
-  margin-top: 150px;
   display: grid;
   grid-template-columns: 33% 33% 33%;
   text-align: center;
