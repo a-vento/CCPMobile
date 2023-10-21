@@ -9,13 +9,13 @@
    }
 }
 *:focus {
-  border: 2px solid white;
+  border: 2px solid #EEE2DC;
 }
 html{
   scroll-behavior: smooth;
 }
 .skip a{
-  background: white;
+  background: #EEE2DC;
   left: 0;
   padding: 6px;
   -webkit-transition: top 1s ease-out;
@@ -35,7 +35,7 @@ a:focus {
 }
 
 nav{
-  background-color: #ddd;
+  background-color: #EEE2DC;
   padding: 25px 0px; 
   text-align: left;
 }
@@ -47,30 +47,41 @@ nav li{
 }
 
 nav a{
-  color: black;
+  color: #AC3B61;
   font-weight: bold;
   text-decoration: none; 
 }
-h2{
-  color: white;
+h1{
+  color: #123C69;
   font-weight: bold;
   text-decoration: none; 
   font-size: 40px;
   text-align: center;
 }
 h2{
-  color: black;
+  color: #AC3B61;
   font-weight: bold;
   text-decoration: none; 
   font-size: 40px;
   text-align: center;
+  font-family: 'Courier New', monospace;
 }
 h3{
-  color: black;
+  color: #AC3B61;
   font-weight: bold;
   text-decoration: none; 
   font-size: 20px;
   text-align: center;
+  font-family: 'Courier New', monospace;
+}
+span{
+  color: #123C69;
+}
+p{
+  color: #123C69;
+}
+figcaption{
+  color: #123C69;
 }
 body > main > div.hssoup-overiew > div.hssoup-additional > h3,
 body > main > div.chickencurry-overiew > div.chickencurry-additional > h3,
@@ -78,18 +89,22 @@ body > main > div.jiaozi-overiew > div.jiaozi-additional > h3{
   margin:50px;
 }
 body{
-  background-color: #336699;
+  background-color: #EDC7b7;
   font-size: 18px;
   line-height: 1.15;
   margin: 0;
   padding: 0;
 }
 ul{
-  color: black;
+  color: AC3B61;
 }
 ul li{
   text-align: center;
   list-style-type: none;
+  color: #123C69;
+}
+img{
+  border-radius: 30px;
 }
 .overview{
   font-family: "Copperplate", "Courier New", monospace;
@@ -99,7 +114,7 @@ ul li{
   align-self: center;
   justify-self: center; 
   overflow: scroll; 
-  margin-bottom:40px;
+  margin-bottom:10px;
 }
 .pluto-image,
 .fitz-image,
@@ -121,8 +136,8 @@ ul li{
 .rocket-text,
 .smoothie-text,
 .brul-text {
-  background-color: rgba(255, 255, 255, .8);
-  border: 10px solid white;
+  background-color: #EEE2DC;
+  border: 10px solid #BAB2B5;
   align-self: center; 
   justify-self: center; 
   overflow: scroll; 
@@ -136,6 +151,8 @@ ul li{
 #smoothie-gallery,
 #brul-gallery,
 #rocket-gallery {
+  background-color: #EEE2DC;
+  border: 10px solid #BAB2B5;
   overflow: scroll;
 }
 #pluto-gallery > ul,
@@ -152,7 +169,7 @@ ul li{
   text-align: center;
   align-self: center; 
   justify-self: center; 
-  border: 10px solid white;
+  border: 10px solid #EEE2DC;
   margin-bottom: 50px;
   min-width: fit-content;
   overflow: scroll;
@@ -179,7 +196,6 @@ margin: 15px;
   text-align: center;
   align-self: center; 
   justify-self: center; 
-  border: 10px solid white;
   min-width: fit-content;
   overflow: hidden;
   margin:auto;
@@ -218,8 +234,8 @@ margin: 15px;
 .jiaozi-text,
 .chickencurry-text,
 .hssoup-text{
-  border: 10px solid white;
-  background-color: rgba(255, 255, 255, .8);
+  background-color: #EEE2DC;
+  border: 10px solid #BAB2B5;
   grid-row: 2;
   grid-column: 1;
   max-height: 400px;
@@ -241,8 +257,10 @@ margin: 15px;
 .chickencurry-description,
 .hssoup-description{
   text-align: center;
-  border: 10px solid white;
-  background-color: rgba(255, 255, 255, .8);
+  background-color: #EEE2DC;
+  border-left: 10px solid #BAB2B5;
+  border-right: 10px solid #BAB2B5;
+  border-bottom: 10px solid #BAB2B5;
   height: auto;
   min-height: fit-content;
   overflow: scroll;
@@ -252,8 +270,10 @@ margin: 15px;
 .chickencurry-ingredients,
 .hssoup-ingredients{
   text-align: center;
-  border: 10px solid white;
-  background-color: rgba(255, 255, 255, .8);
+  background-color: #EEE2DC;
+  border-top: 10px solid #BAB2B5;
+  border-right: 10px solid #BAB2B5;
+  border-bottom: 10px solid #BAB2B5;
   height: auto;
   min-height: fit-content;
   overflow: scroll;
@@ -263,8 +283,9 @@ margin: 15px;
 .chickencurry-steps,
 .hssoup-steps{
   text-align: center;
-  border: 10px solid white;
-  background-color: rgba(255, 255, 255, .8);
+  background-color: #EEE2DC;
+  border-right: 10px solid #BAB2B5;
+  border-bottom: 10px solid #BAB2B5;
   height: auto;
   max-height: 400px;
   overflow: scroll;
@@ -278,7 +299,9 @@ margin: 15px;
   text-align: center;
   align-self: center; 
   justify-self: center; 
-  border-top: 10px solid white;
+  border-top: 10px solid #BAB2B5;
+  border-left: 10px solid #BAB2B5;
+  border-bottom: 10px solid #BAB2B5;
   display: grid;
   grid-template-columns: 33% 33% 33%;
   text-align: center;
