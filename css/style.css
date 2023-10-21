@@ -72,11 +72,11 @@ h3{
   font-size: 20px;
   text-align: center;
 }
-/* body > main > div.hssoup-overiew > div.hssoup-additional > h3,
+body > main > div.hssoup-overiew > div.hssoup-additional > h3,
 body > main > div.chickencurry-overiew > div.chickencurry-additional > h3,
 body > main > div.jiaozi-overiew > div.jiaozi-additional > h3{
   margin:50px;
-} */
+}
 body{
   background-color: #336699;
   font-size: 18px;
