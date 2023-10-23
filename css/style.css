@@ -48,9 +48,13 @@ nav li{
 
 nav a{
   color: #AC3B61;
-  font-weight: bold;
   text-decoration: none; 
 }
+body > header > nav > ul > li.active > strong > a{
+  text-shadow: 2px 2px white;
+  color: #123C69;
+}
+
 h1{
   color: #123C69;
   font-weight: bold;
@@ -74,9 +78,6 @@ h3{
   font-size: 20px;
   text-align: center;
   font-family: 'Courier New', monospace;
-}
-span{
-  color: #123C69;
 }
 p{
   color: #123C69;
@@ -306,7 +307,6 @@ margin: 15px;
   border-bottom: 10px solid #BAB2B5;
   display: grid;
   grid-template-columns: 33% 33% 33%;
-  text-align: center;
   min-width: fit-content;
   overflow: scroll;
 }
