@@ -8,6 +8,7 @@
     transition: none;        
    }
 }
+
 *:focus {
   border: 2px solid #EEE2DC;
 }
