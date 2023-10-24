@@ -323,7 +323,10 @@ margin: 7px;
 #canyon-image,
 #tahoe-image{
   text-align: center;
-  overflow: auto;
+  align-self: center; 
+  justify-self: center; 
+  overflow: scroll;
+  min-height: fit-content;
 }
 
 
