@@ -323,6 +323,7 @@ margin: 7px;
 #canyon-image,
 #tahoe-image{
   text-align: center;
+  overflow: auto;
 }
 
 
@@ -348,9 +349,17 @@ body > main > div > h3{
   background-color: #EEE2DC;
   border: 10px solid #BAB2B5;
 }
+
+#falls-gallery,
+#canyon-gallery,
+#boulder-gallery,
 #tahoe-gallery {
   overflow: scroll;
 }
+
+#falls-gallery > ul,
+#canyon-gallery > ul,
+#boulder-gallery > ul,
 #tahoe-gallery > ul{
   display: grid;
   grid-template-columns: 50% 50%;
@@ -365,6 +374,10 @@ body > main > div > h3{
   min-width: fit-content;
   overflow: scroll;
 }
+
+#falls-gallery > ul li,
+#canyon-gallery > ul li,
+#boulder-gallery > ul li,
 #tahoe-gallery > ul li{
   margin: 15px;
 }
