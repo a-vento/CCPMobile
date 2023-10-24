@@ -325,7 +325,7 @@ margin: 7px;
   text-align: center;
   align-self: center; 
   justify-self: center; 
-  overflow: scroll;
+  overflow: clip;
   min-height: fit-content;
 }
 
