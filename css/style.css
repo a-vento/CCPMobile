@@ -367,14 +367,14 @@ body > main > div > h3{
 #tahoe-gallery > ul{
   display: grid;
   grid-template-columns: 50% 50%;
-  max-width: 100%;
-  height: auto;
+  grid-gap: 10px;
   text-align: center;
   align-self: center; 
   justify-self: center; 
   background-color: #EEE2DC;
   border: 10px solid #BAB2B5;
   margin-bottom: 50px;
+  height: auto;
   min-width: fit-content;
   overflow: scroll;
 }
